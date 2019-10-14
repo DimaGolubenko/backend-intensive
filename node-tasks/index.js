@@ -1,1 +1,1 @@
-require('./lesson-2');
+require('./lesson-3');
