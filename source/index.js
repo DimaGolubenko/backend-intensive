@@ -1,11 +1,16 @@
+//Core
+import express from 'express';
+
 // Instruments
 import { app } from './server';
-import { getPort } from './helpers';
+import { getPort } from './utils';
 
 //Routers
 import { users, auth, classes, lessons } from './routers';
 
 const port = getPort();
+
+app.use(express.json({ limit: '10kb' }));
 
 app.use('/api/auth', auth);
 app.use('/api/users', users);
